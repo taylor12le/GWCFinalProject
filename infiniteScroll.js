@@ -4,7 +4,7 @@ $(document).ready(function() {
     // Each time the user scrolls
     win.scroll(function() {
         // End of the document reached?
-        if ($(document).height() - win.height() == win.scrollTop()) {
+        if (win.scrollTop() + win.height() == $(document).height()) {
             $('#example').append(randomPost());
         }
     });
